@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SemFi Finnish Semantic Data Explorer</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='popper.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+</head>
+<body>
+<div class="container">
+  <h1>SemFi - Finnish Semantic Data Explorer</h1>
+</div>
+<div class="container">
+<form>
+  <div class="form-group">
+    <label for="lemmaInput">Word in lemmatized form</label>
+    <input type="text" class="form-control" id="lemmaInput" placeholder="Try juosta or kissa, for example">
+  </div>
+  <div class="form-group">
+    <label for="posSelector">Select part-of-speech</label>
+    <select class="form-control" id="posSelector">
+      <option>noun</option>
+      <option>verb</option>
+      <option>adjective</option>
+      <option>adverb</option>
+    </select>
+  </div>
+  <button type="button" class="btn btn-primary" onclick="lookupButton(event)">Show related words</button>
+</form>
+</div>
+</body>
+</html>
