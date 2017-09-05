@@ -4,16 +4,22 @@ function lookupButton(event){
 	lookup(lemma, pos);
 }
 
+var lookedUpLemma;
 function lookup(lemma, pos) {
+	lookedUpLemma = lemma;
 	$.ajax({
 	  type: "POST",
 	  url: "api",
 	  data: {"lemma": lemma, "pos": pos},
 	  success: lookupReady
-	});
+	}).fail(function() {
+    $('.error').fadeIn(400).delay(3000).fadeOut(400);
+  });
 }
 
+
 function lookupReady(data){
+	$('body').scrollTop(0);
 	var html = "<table class='table'><thead><tr><th>Relation</th><th>Words and Frequencies</th></tr></thead><tbody>";
 	for(var key in data){
 		html = html + "<tr><th scope='row'>"+_(key)+"</th>";
@@ -25,6 +31,7 @@ function lookupReady(data){
 		items.sort(function(first, second) {
 		    return second[1] - first[1];
 		});
+		items = items.slice(0, 100);
 		html = html + "<td>";
 		for (var i = 0; i < items.length; i++) {
 			var item = items[i];
@@ -41,11 +48,12 @@ function lookupReady(data){
 		html = html + "</td></tr>";
 	}
 	html = html + "</tbody></table>";
+	$("#lemma").text(lookedUpLemma);
 	$("#resultsTableContainer").html(html);
 }
 
 
-var translations = {}
+var translations = {"dir": "direct objects", "indir": "indirect objects"}
 function _(text){
 	if(text in translations){
 		return translations[text];
@@ -53,7 +61,7 @@ function _(text){
 		return text;
 	}
 }
-var poses = {};
+var poses = {"nouns": "noun", "verbs": "verb", "dir": "noun", "indir": "noun", "subjects": "noun"};
 function getPos(text){
 	if(text in poses){
 		return poses[text];

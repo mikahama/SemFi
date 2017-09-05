@@ -2,10 +2,20 @@
 from flask import Flask
 from flask import render_template
 import sqlite3
+import os
+import json
 from flask import g, request, jsonify
 app = Flask(__name__)
 
-DATABASE = '/path/to/database.db'
+BASE_DIR = os.path.dirname(__file__)
+DATABASE = os.path.join(BASE_DIR, 'SemFi.db')
+
+
+def query_db(query, args=(), one=False):
+    cur = get_db().execute(query, args)
+    rv = cur.fetchall()
+    cur.close()
+    return (rv[0] if rv else None) if one else rv
 
 def get_db():
     db = getattr(g, '_database', None)
@@ -26,7 +36,14 @@ def index():
 
 @app.route('/api', methods=['POST'])
 def api():
-	lemma = request.form['lemma']
-	pos = request.form['pos']
-	d = {"adjectives": {"ruma":1000, "hölmö": 5000, "nätti": 3000}, "verbs": {"juosta": 99, "nauraa": 500, "laulaa": 5000}}
-	return jsonify(d)
+    lemma = request.form['lemma']
+    pos = request.form['pos']
+    if pos == "noun":
+        result = query_db('select * from koululaiset_nouns where word = ?', [lemma], one=True)
+        print result
+        d = {"verbs": json.loads(result[1]), "adjectives": json.loads(result[2]), "nouns": json.loads(result[3])}
+    elif pos == "verb":
+        result = query_db('select * from koululaiset_verbs where word = ?', [lemma], one=True)
+        objs = json.loads(result[2])
+        d = {"subjects": json.loads(result[1]), "adverbs": json.loads(result[3]), "dir": objs["dir"], "indir": objs["indir"]}
+    return jsonify(d)

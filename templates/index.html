@@ -26,16 +26,18 @@
     <select class="form-control" id="posSelector">
       <option>noun</option>
       <option>verb</option>
-      <option>adjective</option>
-      <option>adverb</option>
     </select>
   </div>
   <button type="button" class="btn btn-primary" onclick="lookupButton(event)">Show related words</button>
 </form>
+</div>
+<div class="container">
+<p>Showing results for <span class="font-weight-bold" id="lemma"></span></p>
 </div>
 <div class="container" id="resultsTableContainer"></div>
 </body>
 <div class="container">
   <p class="font-italic">SemFi provides you with an online access to word relations obtained from <a href="http://bionlp.utu.fi/finnish-internet-parsebank.html">The Finnish Internet Parsebank</a>. These relations have successfully been used in the task of computational creativity in <a href="http://runokone.cs.helsinki.fi">Poem Machine</a> to create Finnish poetry automatically.</p><p> You can also download these relations to your own computer. This data is released under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. &copy; 2015-2017 <a href="https://mikakalevi.com">Mika Hämäläinen</a></p>
 </div>
+<div class='error' style='display:none;'>Not found</div>
 </html>
