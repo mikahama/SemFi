@@ -47,3 +47,6 @@ def api():
         objs = json.loads(result[2])
         d = {"subjects": json.loads(result[1]), "adverbs": json.loads(result[3]), "dir": objs["dir"], "indir": objs["indir"]}
     return jsonify(d)
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8080)

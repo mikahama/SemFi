@@ -16,7 +16,11 @@ function lookup(lemma, pos) {
     $('.error').fadeIn(400).delay(3000).fadeOut(400);
   });
 }
-
+$(document).ready(function() {
+    $('input').bind('keypress', function(e){
+       if(e.keyCode == 13) { e.preventDefault();lookupButton(event); }
+    });
+});
 
 function lookupReady(data){
 	$('body').scrollTop(0);
