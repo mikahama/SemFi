@@ -1,7 +1,8 @@
+#encoding: utf-8
 from flask import Flask
 from flask import render_template
 import sqlite3
-from flask import g, request
+from flask import g, request, jsonify
 app = Flask(__name__)
 
 DATABASE = '/path/to/database.db'
@@ -27,4 +28,5 @@ def index():
 def api():
 	lemma = request.form['lemma']
 	pos = request.form['pos']
-	return lemma + " " + pos + " not implemented yet :-O"
+	d = {"adjectives": {"ruma":1000, "hölmö": 5000, "nätti": 3000}, "verbs": {"juosta": 99, "nauraa": 500, "laulaa": 5000}}
+	return jsonify(d)
