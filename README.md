@@ -1,4 +1,4 @@
-#SemFi
+# SemFi
 Is an online tool to browse semantic data for Finnish. [**Try SemFi online now!**](https://mikakalevi.com/semfi/)
 
 # The Database
