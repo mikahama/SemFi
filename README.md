@@ -12,3 +12,9 @@ The database contains a noun and a verb table which contain syntactically relate
 And finally a verse structure table that contains the syntactic structures of Finnish poem verses. The around 5000 poems analyzed are the ones released in [wiki sources.](https://fi.wikisource.org/wiki/Luokka:Runot)
 
 ✉️ [In case of questions, contact me.](https://mikakalevi.com/feedback/)
+
+# Cite
+
+In case you use the data in a scientific project, please consider citing it as follows:
+
+Hämäläinen Mika. (2017). SemFi - Finnish Semantic Data for Poem Generation [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1137734
