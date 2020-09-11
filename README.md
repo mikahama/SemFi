@@ -18,3 +18,10 @@ And finally a verse structure table that contains the syntactic structures of Fi
 In case you use the data in a scientific project, please consider citing it as follows:
 
 Hämäläinen Mika. (2017). SemFi - Finnish Semantic Data for Poem Generation [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1137734
+
+# Need for NLP solutions for your business?
+
+
+<img src="https://rootroo.com/cropped-logo-01-png/" alt="Rootroo logo" width="128px" height="128px">
+
+My company, [Rootroo offers consulting related to multilingual NLP tasks](https://rootroo.com/). We have a strong academic background in the state-of-the-art AI solutions for every NLP need. Just contact us, we won't bite.
