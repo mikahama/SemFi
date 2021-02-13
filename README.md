@@ -17,7 +17,7 @@ And finally a verse structure table that contains the syntactic structures of Fi
 
 In case you use the data in a scientific project, please consider citing it as follows:
 
-Hämäläinen Mika. (2017). SemFi - Finnish Semantic Data for Poem Generation [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1137734
+Hämäläinen, Mika (2018). [Extracting a Semantic Database with Syntactic Relations for Finnish to Boost Resources for Endangered Uralic Languages](https://www.researchgate.net/publication/328879417_Extracting_a_Semantic_Database_with_Syntactic_Relations_for_Finnish_to_Boost_Resources_for_Endangered_Uralic_Languages). In *The Proceedings of Logic and Engineering of Natural Language Semantics 15 (LENLS15)*.
 
 # Need for NLP solutions for your business?
 
