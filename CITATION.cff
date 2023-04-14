@@ -1,0 +1,26 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: SemFi
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Mika
+    family-names: Hämäläinen
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.1463685
+    description: Zenodo
+repository-code: 'https://github.com/mikahama/semfi'
+date-released: '2018-10-16'
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Hämäläinen"
+    given-names: "Mika"
+  journal: "The Proceedings of Logic and Engineering of Natural Language Semantics 15 (LENLS15)"
+  title: "Extracting a Semantic Database with Syntactic Relations for Finnish to Boost Resources for Endangered Uralic Languages"
+  year: 2018
