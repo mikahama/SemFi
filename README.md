@@ -19,9 +19,3 @@ In case you use the data in a scientific project, please consider citing it as f
 
 Hämäläinen, Mika (2018). [Extracting a Semantic Database with Syntactic Relations for Finnish to Boost Resources for Endangered Uralic Languages](https://www.researchgate.net/publication/328879417_Extracting_a_Semantic_Database_with_Syntactic_Relations_for_Finnish_to_Boost_Resources_for_Endangered_Uralic_Languages). In *The Proceedings of Logic and Engineering of Natural Language Semantics 15 (LENLS15)*.
 
-# Need for NLP solutions for your business?
-
-
-<img src="https://rootroo.com/cropped-logo-01-png/" alt="Rootroo logo" width="128px" height="128px">
-
-My company, [Rootroo offers consulting related to multilingual NLP tasks](https://rootroo.com/). We have a strong academic background in the state-of-the-art AI solutions for every NLP need. Just contact us, we won't bite.
